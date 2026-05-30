@@ -6,9 +6,10 @@
       function addTimer(refreshInterval) {
         const mmss = new Date();
         document.getElementById("timer").innerHTML = `${mmss.getMinutes()}:${mmss.getSeconds()}`;
+        location.reload(true);
         
         setTimeout(function(refreshInterval) {
-               location.reload(true);
+          addTimer(1000);
         }, refreshInterval);
       }
     </script>
