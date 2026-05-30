@@ -8,9 +8,9 @@
         document.getElementById("timer").innerHTML = `${mmss.getMinutes()}:${mmss.getSeconds()}`;
 
         if(mmss.getMinutes() > 25 || (mmss.getMinutes >= 30 && mmss.getMinutes < 60)) {
-          document.getElementById("indicator").innerHTML = "&#9205;";
+          document.getElementById("indicator").innerHTML = "&#9205; ";
         } else {
-          document.getElementById("indicator").innerHTML = "&#9208;";
+          document.getElementById("indicator").innerHTML = "&#9208; ";
         }
         
         setTimeout(function() {
@@ -21,6 +21,6 @@
   </head>
   <body onload="addTimer(1000)">
     <h1>Global Pomodoro</h1>
-    <p><span id="indicator"> </span><span id="timer"></span></p>
+    <p><span id="indicator"></span><span id="timer"></span></p>
   </body>
 </html>
