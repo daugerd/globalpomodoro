@@ -7,7 +7,7 @@
         const mmss = new Date();
         document.getElementById("timer").innerHTML = `${mmss.getMinutes()}:${mmss.getSeconds()}`;
         
-        setTimeout(function(refreshInterval) {
+        setTimeout(function() {
           location.reload(true);
         }, refreshInterval);
       }
