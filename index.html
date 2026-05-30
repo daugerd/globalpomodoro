@@ -8,12 +8,12 @@
         document.getElementById("timer").innerHTML = `${mmss.getMinutes()}:${mmss.getSeconds()}`;
         
         //
-        console.log(mmmss.getMinutes);
+        console.log(mmss.getMinutes());
         //
         
-        if(mmss.getMinutes < 25 ) {
+        if(mmss.getMinutes() < 25 ) {
           document.getElementById("indicator").innerHTML = "&#9205; ";
-        } if ((mmss.getMinutes >= 30 && mmss.getMinutes < 55)) {
+        } if ((mmss.getMinutes() >= 30 && mmss.getMinutes() < 55)) {
           document.getElementById("indicator").innerHTML = "&#9205; ";
         } else {
           document.getElementById("indicator").innerHTML = "&#9208; ";
