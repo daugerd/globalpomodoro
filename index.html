@@ -4,9 +4,9 @@
     <title>Global Pomodoro</title>
     <script>
       function addTimer(refreshInterval) {
+        location.reload(true);
         const mmss = new Date();
         document.getElementById("timer").innerHTML = `${mmss.getMinutes()}:${mmss.getSeconds()}`;
-        location.reload(true);
         
         setTimeout(function(refreshInterval) {
           addTimer(1000);
