@@ -6,15 +6,14 @@
       function addTimer() {
         const mmss = new Date();
         document.getElementById("timer").innerHTML = `${mmss.getMinutes()}:${mmss.getSeconds()}`;
-      }
-      function refresh(t) {
-            setTimeout(function() {
+
+        setTimeout(function() {
                location.reload(true);
         }, t);
       }
     </script>
   </head>
-  <body onload="addTimer() refresh(1000)">
+  <body onload="addTimer()">
     <h1>Global Pomodoro</h1>
     <p><span id="timer"></span></p>
   </body>
