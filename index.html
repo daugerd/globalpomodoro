@@ -7,7 +7,9 @@
         const mmss = new Date();
         document.getElementById("timer").innerHTML = `${mmss.getMinutes()}:${mmss.getSeconds()}`;
 
-        if(mmss.getMinutes() > 25 || (mmss.getMinutes >= 30 && mmss.getMinutes < 55)) {
+        if((mmss.getMinutes < 25 ) {
+          document.getElementById("indicator").innerHTML = "&#9205; ";
+        } if ((mmss.getMinutes >= 30 && mmss.getMinutes < 55)) {
           document.getElementById("indicator").innerHTML = "&#9205; ";
         } else {
           document.getElementById("indicator").innerHTML = "&#9208; ";
