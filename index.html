@@ -2,8 +2,13 @@
 <html lang="en">
   <head>
     <title>Global Pomodoro</title>
+    <script>
+      const mmss = new Date();
+      document.getElementById("timer").innerHTML = `${mmss.getMinutes()}:${mmss.getSeconds()}`;
+    </script>
   </head>
   <body>
     <h1>Global Pomodoro</h1>
+    <p><span id="timer"></span></p>
   </body>
 </html>
