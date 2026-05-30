@@ -6,15 +6,20 @@
       function addTimer(refreshInterval) {
         const mmss = new Date();
         document.getElementById("timer").innerHTML = `${mmss.getMinutes()}:${mmss.getSeconds()}`;
+
+        if(mmss.getMinutes() > 25 || (mmss.getMinutes >= 30 && mmss.getMinutes < 60)) {
+          document.getElementById("indicator").innerHTML = ▶️;
+        } else {
+          document.getElementById("indicator").innerHTML = ⏸️;
+        }
         
         setTimeout(function() {
           location.reload(true);
         }, refreshInterval);
-      }
     </script>
   </head>
   <body onload="addTimer(1000)">
     <h1>Global Pomodoro</h1>
-    <p><span id="timer"></span></p>
+    <p><span id="indicator"></span><span id="timer"></span></p>
   </body>
 </html>
