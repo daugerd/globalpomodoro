@@ -4,12 +4,11 @@
     <title>Global Pomodoro</title>
     <script>
       function addTimer(refreshInterval) {
-        location.reload(true);
         const mmss = new Date();
         document.getElementById("timer").innerHTML = `${mmss.getMinutes()}:${mmss.getSeconds()}`;
         
         setTimeout(function(refreshInterval) {
-          addTimer(1000);
+          location.reload(true);
         }, refreshInterval);
       }
     </script>
