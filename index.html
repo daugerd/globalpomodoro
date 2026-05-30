@@ -3,11 +3,11 @@
   <head>
     <title>Global Pomodoro</title>
     <script>
-      function addTimer() {
+      function addTimer(refreshInterval) {
         const mmss = new Date();
         document.getElementById("timer").innerHTML = `${mmss.getMinutes()}:${mmss.getSeconds()}`;
         
-        setTimeout(function() {
+        setTimeout(function(refreshInterval) {
                location.reload(true);
         }, t);
       }
