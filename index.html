@@ -22,14 +22,14 @@
         }, refreshInterval);
 
         document.getElementById("controlButton").addEventListener("click", function () {
-          if (document.getElementById("controlButton").innerHTML === "Play") {
-            document.getElementById("controlButton").innerHTML = "Pause";
+          if (document.getElementById("controlButton").innerHTML === "Resume Global Pomodoro") {
+            document.getElementById("controlButton").innerHTML = "Pause Global Pomodoro";
             timerTimeout = setTimeout(function () {
               location.reload(true);
             }, refreshInterval);
           } else {
             clearTimeout(timerTimeout);
-            document.getElementById("controlButton").innerHTML = "Play";
+            document.getElementById("controlButton").innerHTML = "Resume Global Pomodoro";
           }
         });
       }
@@ -38,7 +38,7 @@
   <body onload="addTimer(1000)">
     <h1>Global Pomodoro</h1>
     <p><span id="indicator"></span><span id="timer"></span></p>
-    <button id="controlButton">Pause</button>
+    <button id="controlButton">Pause Global Pomodoro</button>
     <p>Data Not Collected. The developer does not collect any data from this app.</p>
     <p>Support: <a href="mailto:gp@daugerd.com">gp@daugerd.com</a></p>
   </body>
